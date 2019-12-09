@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import ExchangeTopBar from "../../components/ExchangeTopBar";
 import ExchangeCurrencyCarousel from "../../components/ExchangeCurrencyCarousel";
 import { fieldNames } from "../../constants/fields";
+import { getInputValue, validateInput, calculateRate } from "../../helpers";
 
 class CurrencyExchange extends React.Component {
   constructor(props) {
@@ -13,56 +14,6 @@ class CurrencyExchange extends React.Component {
       [fieldNames.destinationAmount]: ""
     };
   }
-
-  componentDidMount() {
-    // this.getRates();
-  }
-
-  componentWillUnmount() {
-    // clearInterval(this.getRatesIntervalId);
-  }
-
-  checkValueContainsPlusorMinus = value => {
-    const stringifiedInputValue = value.toString();
-    return (
-      stringifiedInputValue.indexOf("+") !== -1 ||
-      stringifiedInputValue.indexOf("-") !== -1
-    );
-  };
-
-  validateInput = value => {
-    const stringifiedInputValue = value.toString();
-    return (
-      stringifiedInputValue === "" ||
-      /^[0-9]+$/.test(stringifiedInputValue) ||
-      /^[0-9]*[.]$/.test(stringifiedInputValue) ||
-      /^[0-9]*[.][0-9]{1,2}$/.test(stringifiedInputValue)
-    );
-  };
-
-  validateNumber = value => {
-    return /^[0-9]+$/.test(value);
-  };
-
-  getInputValue = value => {
-    const stringifiedInputValue = value.toString();
-    if (this.checkValueContainsPlusorMinus(value)) {
-      if (stringifiedInputValue.length > 1) {
-        return stringifiedInputValue.substring(1);
-      }
-      return "";
-    } else {
-      return stringifiedInputValue;
-    }
-  };
-
-  calculateRate = (rate, destinationCurrency, sourceCurrency, value) => {
-    if (sourceCurrency !== destinationCurrency) {
-      return rate * value;
-    } else {
-      return value;
-    }
-  };
 
   calculateLiveRates = (conversionDirection, value) => {
     const { rates, sourceCurrency, destinationCurrency } = this.props;
@@ -86,7 +37,7 @@ class CurrencyExchange extends React.Component {
                 el => el === destinationCurrency
               );
 
-              const destinationResult = this.calculateRate(
+              const destinationResult = calculateRate(
                 rate.rates[derivedDestinationCurrency],
                 derivedDestinationCurrency,
                 sourceCurrency,
@@ -115,7 +66,7 @@ class CurrencyExchange extends React.Component {
                 el => el === sourceCurrency
               );
 
-              const sourceResult = this.calculateRate(
+              const sourceResult = calculateRate(
                 rate.rates[derivedSourceCurrency],
                 destinationCurrency,
                 derivedSourceCurrency,
@@ -138,42 +89,16 @@ class CurrencyExchange extends React.Component {
 
   handleChange = event => {
     const name = event.target.name;
-    const value = this.getInputValue(event.target.value);
+    const value = getInputValue(event.target.value);
 
     if (this.firstCharZero(value)) {
       return;
     }
 
-    if (this.validateInput(value)) {
-      this.setState({ [name]: value !== "" ? value : "" });
+    if (validateInput(value)) {
+      this.setState({ [name]: value !== "" ? value.toFixed(2) : "" });
       this.calculateLiveRates(name, value);
     }
-  };
-
-  getRates = () => {
-    const { saveRates } = this.props;
-    // Prefetch rates for all currencies
-    fetch(
-      "https://api.exchangeratesapi.io/latest?base=USD&symbols=EUR,GBP"
-    ).then(response => {
-      response.json().then(data => {
-        saveRates(data);
-      });
-    });
-    fetch(
-      "https://api.exchangeratesapi.io/latest?base=GBP&symbols=EUR,USD"
-    ).then(response => {
-      response.json().then(data => {
-        saveRates(data);
-      });
-    });
-    fetch(
-      "https://api.exchangeratesapi.io/latest?base=EUR&symbols=USD,GBP"
-    ).then(response => {
-      response.json().then(data => {
-        saveRates(data);
-      });
-    });
   };
 
   recalculateOnSlide = conversionDirection => {
@@ -327,7 +252,6 @@ export default CurrencyExchange;
 
 CurrencyExchange.propTypes = {
   setExchangeOpenState: PropTypes.func.isRequired,
-  saveRates: PropTypes.func.isRequired,
   sourceCurrency: PropTypes.string.isRequired,
   destinationCurrency: PropTypes.string.isRequired,
   pockets: PropTypes.array.isRequired,

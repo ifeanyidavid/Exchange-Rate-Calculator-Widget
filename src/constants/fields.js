@@ -10,5 +10,5 @@ export const fieldNames = {
   id: "id",
   error: "error",
   loading: "loading",
-  rates: "rates",
+  rates: "rates"
 };

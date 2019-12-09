@@ -6,7 +6,6 @@ import "./App.css";
 import Pocket from "./views/Pocket";
 import CurrencyExchange from "./views/CurrencyExchange";
 import {
-  saveRates,
   updateSourceCurrency,
   updateDestinationCurrency,
   exchangeCurrency
@@ -44,7 +43,6 @@ const Row = styled.div`
 `;
 
 function App({
-  saveRates,
   updateSourceCurrencySlide,
   updateDestinationCurrencySlide,
   pocketValues,
@@ -68,7 +66,6 @@ function App({
               {exchangeViewOpen ? (
                 <CurrencyExchange
                   setExchangeOpenState={setExchangeOpenState}
-                  saveRates={saveRates}
                   sourceCurrency={sourceCurrency}
                   destinationCurrency={destinationCurrency}
                   pockets={pocketValues}
@@ -114,7 +111,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    saveRates: rates => dispatch(saveRates(rates)),
     updateSourceCurrencySlide: slideIndex =>
       dispatch(updateSourceCurrency(slideIndex)),
     updateDestinationCurrencySlide: slideIndex =>
@@ -139,7 +135,6 @@ const mapDispatchToProps = dispatch => {
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 App.propTypes = {
-  saveRates: PropTypes.func.isRequired,
   updateSourceCurrencySlide: PropTypes.func.isRequired,
   updateDestinationCurrencySlide: PropTypes.func.isRequired,
   pocketValues: PropTypes.array.isRequired,

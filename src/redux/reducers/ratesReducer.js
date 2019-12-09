@@ -1,13 +1,9 @@
 import * as types from "../../constants/actionTypes";
-import { updateObject, getCurrencyById } from "../helpers";
+import { updateObject, getCurrencyById } from "../../helpers";
 import { fieldNames } from "../../constants/fields";
 
 const initialState = {
-  [fieldNames.rates]: [
-    { rates: { EUR: 1.18, USD: 1.31 }, base: "GBP", date: "2019-12-06" },
-    { rates: { EUR: 0.9, GBP: 0.76 }, base: "USD", date: "2019-12-06" },
-    { rates: { USD: 1.11, GBP: 0.84 }, base: "EUR", date: "2019-12-06" }
-  ],
+  [fieldNames.rates]: [],
   [fieldNames.loading]: false,
   [fieldNames.error]: null,
   [fieldNames.sourceCurrency]: "EUR",
@@ -30,7 +26,7 @@ const fetchRatesError = state => {
 const fetchRatesDone = (state, action) => {
   return updateObject(state, {
     [fieldNames.loading]: false,
-    [fieldNames.rates]: [...state.rates, ...[action.payload]]
+    [fieldNames.rates]: action.payload
   });
 };
 
