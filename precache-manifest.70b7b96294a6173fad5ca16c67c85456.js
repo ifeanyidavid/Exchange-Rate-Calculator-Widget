@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9b230d7358d03136d0b17f3a9481d91f",
+    "revision": "c9648bc0f930193469b26dde04a50d09",
     "url": "/exchange-rate-calculator-widget/index.html"
   },
   {
-    "revision": "201aeaade7eb4ce278c6",
+    "revision": "c5c7f8baa07278673f3f",
     "url": "/exchange-rate-calculator-widget/static/css/2.6d0a65c4.chunk.css"
   },
   {
-    "revision": "40540d67809d8da0d0f5",
+    "revision": "3ed17fdd083c2892b2a0",
     "url": "/exchange-rate-calculator-widget/static/css/main.bd0493ab.chunk.css"
   },
   {
-    "revision": "201aeaade7eb4ce278c6",
-    "url": "/exchange-rate-calculator-widget/static/js/2.3a607d22.chunk.js"
+    "revision": "c5c7f8baa07278673f3f",
+    "url": "/exchange-rate-calculator-widget/static/js/2.9aeb2d39.chunk.js"
   },
   {
-    "revision": "40540d67809d8da0d0f5",
-    "url": "/exchange-rate-calculator-widget/static/js/main.3d94ba80.chunk.js"
+    "revision": "3ed17fdd083c2892b2a0",
+    "url": "/exchange-rate-calculator-widget/static/js/main.2fac14ae.chunk.js"
   },
   {
     "revision": "0f052a637550de33e4ea",
