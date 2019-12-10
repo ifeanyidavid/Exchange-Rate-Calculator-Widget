@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/exchange-rate-calculator-widget/static/css/main.bd0493ab.chunk.css",
-    "main.js": "/exchange-rate-calculator-widget/static/js/main.2fac14ae.chunk.js",
-    "main.js.map": "/exchange-rate-calculator-widget/static/js/main.2fac14ae.chunk.js.map",
-    "runtime-main.js": "/exchange-rate-calculator-widget/static/js/runtime-main.715f6ae6.js",
-    "runtime-main.js.map": "/exchange-rate-calculator-widget/static/js/runtime-main.715f6ae6.js.map",
-    "static/css/2.6d0a65c4.chunk.css": "/exchange-rate-calculator-widget/static/css/2.6d0a65c4.chunk.css",
-    "static/js/2.9aeb2d39.chunk.js": "/exchange-rate-calculator-widget/static/js/2.9aeb2d39.chunk.js",
-    "static/js/2.9aeb2d39.chunk.js.map": "/exchange-rate-calculator-widget/static/js/2.9aeb2d39.chunk.js.map",
+    "main.js": "/exchange-rate-calculator-widget/static/js/main.dfc12dc2.chunk.js",
+    "main.js.map": "/exchange-rate-calculator-widget/static/js/main.dfc12dc2.chunk.js.map",
+    "runtime-main.js": "/exchange-rate-calculator-widget/static/js/runtime-main.22e434b2.js",
+    "runtime-main.js.map": "/exchange-rate-calculator-widget/static/js/runtime-main.22e434b2.js.map",
+    "static/css/2.c7217376.chunk.css": "/exchange-rate-calculator-widget/static/css/2.c7217376.chunk.css",
+    "static/js/2.d24b353f.chunk.js": "/exchange-rate-calculator-widget/static/js/2.d24b353f.chunk.js",
+    "static/js/2.d24b353f.chunk.js.map": "/exchange-rate-calculator-widget/static/js/2.d24b353f.chunk.js.map",
     "index.html": "/exchange-rate-calculator-widget/index.html",
-    "precache-manifest.70b7b96294a6173fad5ca16c67c85456.js": "/exchange-rate-calculator-widget/precache-manifest.70b7b96294a6173fad5ca16c67c85456.js",
+    "precache-manifest.c4569b9d03d3395d4f8213587c2e6a49.js": "/exchange-rate-calculator-widget/precache-manifest.c4569b9d03d3395d4f8213587c2e6a49.js",
     "service-worker.js": "/exchange-rate-calculator-widget/service-worker.js",
-    "static/css/2.6d0a65c4.chunk.css.map": "/exchange-rate-calculator-widget/static/css/2.6d0a65c4.chunk.css.map",
+    "static/css/2.c7217376.chunk.css.map": "/exchange-rate-calculator-widget/static/css/2.c7217376.chunk.css.map",
     "static/css/main.bd0493ab.chunk.css.map": "/exchange-rate-calculator-widget/static/css/main.bd0493ab.chunk.css.map",
     "static/media/rep.9be71f7b.svg": "/exchange-rate-calculator-widget/static/media/rep.9be71f7b.svg",
     "static/media/slick-theme.css": "/exchange-rate-calculator-widget/static/media/slick.f97e3bbf.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.715f6ae6.js",
-    "static/css/2.6d0a65c4.chunk.css",
-    "static/js/2.9aeb2d39.chunk.js",
+    "static/js/runtime-main.22e434b2.js",
+    "static/css/2.c7217376.chunk.css",
+    "static/js/2.d24b353f.chunk.js",
     "static/css/main.bd0493ab.chunk.css",
-    "static/js/main.2fac14ae.chunk.js"
+    "static/js/main.dfc12dc2.chunk.js"
   ]
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/exchange-rate-calculator-widget/precache-manifest.70b7b96294a6173fad5ca16c67c85456.js"
+  "/exchange-rate-calculator-widget/precache-manifest.c4569b9d03d3395d4f8213587c2e6a49.js"
 );
 
 self.addEventListener('message', (event) => {
