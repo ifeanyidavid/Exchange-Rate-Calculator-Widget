@@ -71,9 +71,7 @@ function CurrencyPocketsCarousel({ updateSourceCurrency, pockets, currency }) {
           <SliderContainer key={pocket.id}>
             <div>
               <BlockText weight="bold" fontSize="32px">
-                {`${pocket.symbol} ${parseInt(pocket.balance)
-                  .toFixed(2)
-                  .toString()}`}
+                {`${pocket.symbol} ${parseFloat(pocket.balance).toFixed(2)}`}
               </BlockText>
               <BlockText weight="normal" fontSize="16px">
                 {`${pocket.currency} - ${pocket.description}`}

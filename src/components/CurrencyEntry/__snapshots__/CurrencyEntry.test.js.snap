@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrencyEntry component Renders correctly 1`] = `
+<styled.div>
+  <div
+    className="d-flex flex-column balance"
+  >
+    <h2
+      className="currency"
+    >
+      USD
+    </h2>
+    <small
+      className="text-muted"
+    >
+      You have 
+      $
+       
+      300
+    </small>
+  </div>
+  <div
+    className="d-flex flex-column justify-content-end"
+  >
+    <input
+      autoComplete="off"
+      className="currency-input"
+      name="source"
+      onChange={[Function]}
+      pattern="[0-9]*"
+      placeholder="0"
+      type="text"
+      value="+1.1"
+    />
+    <small
+      className="font-weight-bold text-right"
+    >
+      1.12
+    </small>
+  </div>
+</styled.div>
+`;

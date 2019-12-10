@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrencyPocketsCarousel component Renders correctly 1`] = `
+<Fragment>
+  <Slider
+    afterChange={[Function]}
+    dots={true}
+    infinite={true}
+    initialSlide={2}
+    responsive={
+      Array [
+        Object {
+          "breakpoint": 1024,
+          "settings": Object {
+            "dots": true,
+            "infinite": true,
+            "slidesToScroll": 1,
+            "slidesToShow": 1,
+          },
+        },
+        Object {
+          "breakpoint": 600,
+          "settings": Object {
+            "initialSlide": 2,
+            "slidesToScroll": 1,
+            "slidesToShow": 1,
+          },
+        },
+        Object {
+          "breakpoint": 480,
+          "settings": Object {
+            "slidesToScroll": 1,
+            "slidesToShow": 1,
+          },
+        },
+      ]
+    }
+    slidesToScroll={1}
+    slidesToShow={1}
+    speed={500}
+    swipeToSlide={true}
+  >
+    <styled.div
+      key="0"
+    >
+      <div>
+        <styled.span
+          fontSize="32px"
+          weight="bold"
+        >
+          € 300.00
+        </styled.span>
+        <styled.span
+          fontSize="16px"
+          weight="normal"
+        >
+          EUR - Euro
+        </styled.span>
+      </div>
+    </styled.div>
+    <styled.div
+      key="1"
+    >
+      <div>
+        <styled.span
+          fontSize="32px"
+          weight="bold"
+        >
+          £ 300.00
+        </styled.span>
+        <styled.span
+          fontSize="16px"
+          weight="normal"
+        >
+          GBP - British Pound
+        </styled.span>
+      </div>
+    </styled.div>
+    <styled.div
+      key="2"
+    >
+      <div>
+        <styled.span
+          fontSize="32px"
+          weight="bold"
+        >
+          $ 300.00
+        </styled.span>
+        <styled.span
+          fontSize="16px"
+          weight="normal"
+        >
+          USD - American Dollar
+        </styled.span>
+      </div>
+    </styled.div>
+  </Slider>
+</Fragment>
+`;

@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pockets action creators should EXCHANGE_CURRENCY and data to store in state 1`] = `
+Array [
+  Object {
+    "type": "FETCH_RATES_START",
+  },
+  Object {
+    "payload": [Error: Network disconnected],
+    "type": "FETCH_RATES_ERROR",
+  },
+  Object {
+    "payload": Array [
+      Object {
+        "base": "EUR",
+        "date": "2019-12-09",
+        "rates": Object {
+          "GBP": 0.84195,
+          "USD": 1.1075,
+        },
+      },
+      Object {
+        "base": "GBP",
+        "date": "2019-12-09",
+        "rates": Object {
+          "EUR": 1.1877189857,
+          "USD": 1.3153987766,
+        },
+      },
+      Object {
+        "base": "USD",
+        "date": "2019-12-09",
+        "rates": Object {
+          "EUR": 0.9029345372,
+          "GBP": 0.7602257336,
+        },
+      },
+    ],
+    "type": "FETCH_RATES_DONE",
+  },
+  Object {
+    "payload": 1,
+    "type": "UPDATE_SOURCE_CURRENCY",
+  },
+  Object {
+    "payload": 1,
+    "type": "UPDATE_DESTINATION_CURRENCY",
+  },
+  Object {
+    "payload": Object {
+      "destinationAmount": 54,
+      "destinationCurrency": "EUR",
+      "sourceAmount": 23,
+      "sourceCurrency": "USD",
+    },
+    "type": "EXCHANGE_CURRENCY",
+  },
+]
+`;
+
+exports[`Rates action creators should dispatch FETCH_RATES_DONE and data to store in state 1`] = `
+Array [
+  Object {
+    "type": "FETCH_RATES_START",
+  },
+  Object {
+    "payload": [Error: Network disconnected],
+    "type": "FETCH_RATES_ERROR",
+  },
+  Object {
+    "payload": Array [
+      Object {
+        "base": "EUR",
+        "date": "2019-12-09",
+        "rates": Object {
+          "GBP": 0.84195,
+          "USD": 1.1075,
+        },
+      },
+      Object {
+        "base": "GBP",
+        "date": "2019-12-09",
+        "rates": Object {
+          "EUR": 1.1877189857,
+          "USD": 1.3153987766,
+        },
+      },
+      Object {
+        "base": "USD",
+        "date": "2019-12-09",
+        "rates": Object {
+          "EUR": 0.9029345372,
+          "GBP": 0.7602257336,
+        },
+      },
+    ],
+    "type": "FETCH_RATES_DONE",
+  },
+]
+`;
+
+exports[`Rates action creators should dispatch FETCH_RATES_ERROR and error to store in state 1`] = `
+Array [
+  Object {
+    "type": "FETCH_RATES_START",
+  },
+  Object {
+    "payload": [Error: Network disconnected],
+    "type": "FETCH_RATES_ERROR",
+  },
+]
+`;
+
+exports[`Rates action creators should dispatch FETCH_RATES_START action 1`] = `
+Array [
+  Object {
+    "type": "FETCH_RATES_START",
+  },
+]
+`;
+
+exports[`Rates action creators should dispatch UPDATE_DESTINATION_CURRENCY and slideIndex to store in state 1`] = `
+Array [
+  Object {
+    "type": "FETCH_RATES_START",
+  },
+  Object {
+    "payload": [Error: Network disconnected],
+    "type": "FETCH_RATES_ERROR",
+  },
+  Object {
+    "payload": Array [
+      Object {
+        "base": "EUR",
+        "date": "2019-12-09",
+        "rates": Object {
+          "GBP": 0.84195,
+          "USD": 1.1075,
+        },
+      },
+      Object {
+        "base": "GBP",
+        "date": "2019-12-09",
+        "rates": Object {
+          "EUR": 1.1877189857,
+          "USD": 1.3153987766,
+        },
+      },
+      Object {
+        "base": "USD",
+        "date": "2019-12-09",
+        "rates": Object {
+          "EUR": 0.9029345372,
+          "GBP": 0.7602257336,
+        },
+      },
+    ],
+    "type": "FETCH_RATES_DONE",
+  },
+  Object {
+    "payload": 1,
+    "type": "UPDATE_SOURCE_CURRENCY",
+  },
+  Object {
+    "payload": 1,
+    "type": "UPDATE_DESTINATION_CURRENCY",
+  },
+]
+`;
+
+exports[`Rates action creators should dispatch UPDATE_SOURCE_CURRENCY and slideIndex to store in state 1`] = `
+Array [
+  Object {
+    "type": "FETCH_RATES_START",
+  },
+  Object {
+    "payload": [Error: Network disconnected],
+    "type": "FETCH_RATES_ERROR",
+  },
+  Object {
+    "payload": Array [
+      Object {
+        "base": "EUR",
+        "date": "2019-12-09",
+        "rates": Object {
+          "GBP": 0.84195,
+          "USD": 1.1075,
+        },
+      },
+      Object {
+        "base": "GBP",
+        "date": "2019-12-09",
+        "rates": Object {
+          "EUR": 1.1877189857,
+          "USD": 1.3153987766,
+        },
+      },
+      Object {
+        "base": "USD",
+        "date": "2019-12-09",
+        "rates": Object {
+          "EUR": 0.9029345372,
+          "GBP": 0.7602257336,
+        },
+      },
+    ],
+    "type": "FETCH_RATES_DONE",
+  },
+  Object {
+    "payload": 1,
+    "type": "UPDATE_SOURCE_CURRENCY",
+  },
+]
+`;

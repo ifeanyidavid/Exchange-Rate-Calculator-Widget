@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionHistoryItem component Renders correctly 1`] = `
+<div
+  className="mb-2"
+>
+  <styled.div
+    justifyContent="space-between"
+  >
+    <styled.div>
+      <i
+        className="exchange-icon exchange-icon-dark"
+      >
+        <ForwardRef(SvgRep) />
+      </i>
+      <div
+        className="text-left ml-3"
+      >
+        <span
+          className="d-block"
+        >
+          Exchanged to EUR
+        </span>
+        <span
+          className="d-block text-muted"
+        >
+          2:35:40 PM
+        </span>
+      </div>
+    </styled.div>
+    <div
+      className="text-right"
+    >
+      <span
+        className="d-block"
+      >
+        -
+        USD
+         
+        23
+      </span>
+      <span
+        className="d-block text-primary"
+      >
+        +
+        EUR
+         
+        42
+      </span>
+    </div>
+  </styled.div>
+</div>
+`;

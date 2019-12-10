@@ -30,9 +30,9 @@ const Flex = styled.div`
   }
 `;
 
-function TransactionHistoryItem({ history, hasMarginBottom }) {
+function TransactionHistoryItem({ history, marginBottom }) {
   return (
-    <div className={`${hasMarginBottom}`}>
+    <div className={`${marginBottom}`}>
       <Flex justifyContent="space-between">
         <Flex>
           <i className="exchange-icon exchange-icon-dark">
@@ -60,5 +60,5 @@ export default TransactionHistoryItem;
 
 TransactionHistoryItem.propTypes = {
   history: PropTypes.object,
-  hasMarginBottom: PropTypes.string
+  marginBottom: PropTypes.string
 };

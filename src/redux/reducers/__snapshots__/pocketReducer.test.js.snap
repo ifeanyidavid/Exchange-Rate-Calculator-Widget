@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pockets reducer should handle EXCHANGE_CURRENCY 1`] = `
+Object {
+  "pockets": Object {
+    "EUR": Object {
+      "balance": 354,
+      "currency": "EUR",
+      "description": "Euro",
+      "id": 0,
+      "symbol": "€",
+    },
+    "GBP": Object {
+      "balance": 300,
+      "currency": "GBP",
+      "description": "British Pound",
+      "id": 1,
+      "symbol": "£",
+    },
+    "USD": Object {
+      "balance": 323,
+      "currency": "USD",
+      "description": "American Dollar",
+      "id": 2,
+      "symbol": "$",
+    },
+  },
+  "transactionHistory": Array [
+    Object {
+      "description": "Exchanged to EUR",
+      "destinationAmount": 54,
+      "destinationCurrency": "EUR",
+      "id": "36178e9b-62f2-4e54-90c5-b8cfa6700003",
+      "sourceAmount": 23,
+      "sourceCurrency": "USD",
+      "time": "2:35:40 PM",
+    },
+  ],
+}
+`;
+
+exports[`pockets reducer should return the initial state 1`] = `
+Object {
+  "pockets": Object {
+    "EUR": Object {
+      "balance": 300,
+      "currency": "EUR",
+      "description": "Euro",
+      "id": 0,
+      "symbol": "€",
+    },
+    "GBP": Object {
+      "balance": 300,
+      "currency": "GBP",
+      "description": "British Pound",
+      "id": 1,
+      "symbol": "£",
+    },
+    "USD": Object {
+      "balance": 300,
+      "currency": "USD",
+      "description": "American Dollar",
+      "id": 2,
+      "symbol": "$",
+    },
+  },
+  "transactionHistory": Array [],
+}
+`;

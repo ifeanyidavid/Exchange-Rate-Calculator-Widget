@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Currency exchange component Renders correctly 1`] = `
+<Fragment>
+  <ExchangeTopBar
+    disableExchangeButton={[Function]}
+    exhchangeCurrency={[Function]}
+    setExchangeOpenState={[MockFunction]}
+    sourceRate="1 EUR = 1.00 USD"
+  />
+  <ExchangeCurrencyCarousel
+    currency="EUR"
+    name="sourceAmount"
+    onChange={[Function]}
+    onSlide={[MockFunction]}
+    pockets={
+      Array [
+        Object {
+          "balance": 300,
+          "currency": "EUR",
+          "description": "Euro",
+          "id": 0,
+          "symbol": "€",
+        },
+        Object {
+          "balance": 300,
+          "currency": "GBP",
+          "description": "British Pound",
+          "id": 1,
+          "symbol": "£",
+        },
+        Object {
+          "balance": 300,
+          "currency": "USD",
+          "description": "American Dollar",
+          "id": 2,
+          "symbol": "$",
+        },
+      ]
+    }
+    ratesFetched={[Function]}
+    recalculateOnSlide={[Function]}
+    showExchangeRate={false}
+    value=""
+  />
+  <hr />
+  <ExchangeCurrencyCarousel
+    currency="USD"
+    destinationRate="1 USD = 2.00 EUR"
+    name="destinationAmount"
+    onChange={[Function]}
+    onSlide={[MockFunction]}
+    pockets={
+      Array [
+        Object {
+          "balance": 300,
+          "currency": "EUR",
+          "description": "Euro",
+          "id": 0,
+          "symbol": "€",
+        },
+        Object {
+          "balance": 300,
+          "currency": "GBP",
+          "description": "British Pound",
+          "id": 1,
+          "symbol": "£",
+        },
+        Object {
+          "balance": 300,
+          "currency": "USD",
+          "description": "American Dollar",
+          "id": 2,
+          "symbol": "$",
+        },
+      ]
+    }
+    ratesFetched={[Function]}
+    recalculateOnSlide={[Function]}
+    showExchangeRate={true}
+    value=""
+  />
+</Fragment>
+`;

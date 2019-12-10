@@ -1,9 +1,10 @@
 import v4 from "uuid/v4";
+import numeral from "numeral";
 import * as types from "../../constants/actionTypes";
 import { currencies } from "../../constants/currencies";
 import { fieldNames } from "../../constants/fields";
 
-const initialState = {
+export const initialState = {
   pockets: {
     [currencies.EUR.value]: {
       [fieldNames.id]: currencies.EUR.id,
@@ -44,8 +45,9 @@ const exchangeCurrency = (state, action) => {
     [sourceCurrency]: {
       [fieldNames.id]: sourcePocket.id,
       [fieldNames.currency]: sourceCurrency,
-      [fieldNames.balance]:
-        parseInt(sourcePocket.balance) - parseInt(sourceAmount),
+      [fieldNames.balance]: numeral(sourcePocket.balance)
+        .add(sourceAmount)
+        .value(),
       [fieldNames.symbol]: sourcePocket.symbol,
       [fieldNames.description]: sourcePocket.description
     }
@@ -55,8 +57,9 @@ const exchangeCurrency = (state, action) => {
     [destinationCurrency]: {
       [fieldNames.id]: destinationPocket.id,
       [fieldNames.currency]: destinationCurrency,
-      [fieldNames.balance]:
-        parseInt(destinationPocket.balance) + parseInt(destinationAmount),
+      [fieldNames.balance]: numeral(destinationPocket.balance)
+        .add(destinationAmount)
+        .value(),
       [fieldNames.symbol]: destinationPocket.symbol,
       [fieldNames.description]: destinationPocket.description
     }

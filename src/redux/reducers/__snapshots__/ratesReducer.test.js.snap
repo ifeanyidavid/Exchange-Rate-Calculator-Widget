@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rates reducer should handle FETCH_RATES_DONE 1`] = `
+Object {
+  "pockets": Object {
+    "EUR": Object {
+      "balance": 300,
+      "currency": "EUR",
+      "description": "Euro",
+      "id": 0,
+      "symbol": "€",
+    },
+    "GBP": Object {
+      "balance": 300,
+      "currency": "GBP",
+      "description": "British Pound",
+      "id": 1,
+      "symbol": "£",
+    },
+    "USD": Object {
+      "balance": 300,
+      "currency": "USD",
+      "description": "American Dollar",
+      "id": 2,
+      "symbol": "$",
+    },
+  },
+  "transactionHistory": Array [],
+}
+`;
+
+exports[`Rates reducer should handle FETCH_RATES_ERROR 1`] = `
+Object {
+  "pockets": Object {
+    "EUR": Object {
+      "balance": 300,
+      "currency": "EUR",
+      "description": "Euro",
+      "id": 0,
+      "symbol": "€",
+    },
+    "GBP": Object {
+      "balance": 300,
+      "currency": "GBP",
+      "description": "British Pound",
+      "id": 1,
+      "symbol": "£",
+    },
+    "USD": Object {
+      "balance": 300,
+      "currency": "USD",
+      "description": "American Dollar",
+      "id": 2,
+      "symbol": "$",
+    },
+  },
+  "transactionHistory": Array [],
+}
+`;
+
+exports[`Rates reducer should handle FETCH_RATES_START 1`] = `
+Object {
+  "pockets": Object {
+    "EUR": Object {
+      "balance": 300,
+      "currency": "EUR",
+      "description": "Euro",
+      "id": 0,
+      "symbol": "€",
+    },
+    "GBP": Object {
+      "balance": 300,
+      "currency": "GBP",
+      "description": "British Pound",
+      "id": 1,
+      "symbol": "£",
+    },
+    "USD": Object {
+      "balance": 300,
+      "currency": "USD",
+      "description": "American Dollar",
+      "id": 2,
+      "symbol": "$",
+    },
+  },
+  "transactionHistory": Array [],
+}
+`;
+
+exports[`Rates reducer should handle UPDATE_DESTINATION_CURRENCY 1`] = `
+Object {
+  "pockets": Object {
+    "EUR": Object {
+      "balance": 300,
+      "currency": "EUR",
+      "description": "Euro",
+      "id": 0,
+      "symbol": "€",
+    },
+    "GBP": Object {
+      "balance": 300,
+      "currency": "GBP",
+      "description": "British Pound",
+      "id": 1,
+      "symbol": "£",
+    },
+    "USD": Object {
+      "balance": 300,
+      "currency": "USD",
+      "description": "American Dollar",
+      "id": 2,
+      "symbol": "$",
+    },
+  },
+  "transactionHistory": Array [],
+}
+`;
+
+exports[`Rates reducer should handle UPDATE_SOURCE_CURRENCY 1`] = `
+Object {
+  "pockets": Object {
+    "EUR": Object {
+      "balance": 300,
+      "currency": "EUR",
+      "description": "Euro",
+      "id": 0,
+      "symbol": "€",
+    },
+    "GBP": Object {
+      "balance": 300,
+      "currency": "GBP",
+      "description": "British Pound",
+      "id": 1,
+      "symbol": "£",
+    },
+    "USD": Object {
+      "balance": 300,
+      "currency": "USD",
+      "description": "American Dollar",
+      "id": 2,
+      "symbol": "$",
+    },
+  },
+  "transactionHistory": Array [],
+}
+`;
+
+exports[`Rates reducer should return the initial state 1`] = `
+Object {
+  "pockets": Object {
+    "EUR": Object {
+      "balance": 300,
+      "currency": "EUR",
+      "description": "Euro",
+      "id": 0,
+      "symbol": "€",
+    },
+    "GBP": Object {
+      "balance": 300,
+      "currency": "GBP",
+      "description": "British Pound",
+      "id": 1,
+      "symbol": "£",
+    },
+    "USD": Object {
+      "balance": 300,
+      "currency": "USD",
+      "description": "American Dollar",
+      "id": 2,
+      "symbol": "$",
+    },
+  },
+  "transactionHistory": Array [],
+}
+`;

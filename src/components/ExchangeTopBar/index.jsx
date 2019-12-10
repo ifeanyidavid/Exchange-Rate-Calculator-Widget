@@ -32,7 +32,7 @@ function ExchangeTopBar({
   return (
     <Nav>
       <button
-        className="text-btn text-muted"
+        className="text-btn text-muted cancel"
         onClick={() => setExchangeOpenState(false)}
       >
         Cancel

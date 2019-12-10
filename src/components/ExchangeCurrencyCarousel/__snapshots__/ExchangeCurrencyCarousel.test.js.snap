@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExchangeCurrencyCarousel component Renders correctly 1`] = `
+<Slider
+  afterChange={[Function]}
+  dots={true}
+  infinite={true}
+  initialSlide={2}
+  responsive={
+    Array [
+      Object {
+        "breakpoint": 1024,
+        "settings": Object {
+          "dots": true,
+          "infinite": true,
+          "slidesToScroll": 1,
+          "slidesToShow": 1,
+        },
+      },
+      Object {
+        "breakpoint": 600,
+        "settings": Object {
+          "initialSlide": 2,
+          "slidesToScroll": 1,
+          "slidesToShow": 1,
+        },
+      },
+      Object {
+        "breakpoint": 480,
+        "settings": Object {
+          "slidesToScroll": 1,
+          "slidesToShow": 1,
+        },
+      },
+    ]
+  }
+  slidesToScroll={1}
+  slidesToShow={1}
+  speed={500}
+  style={
+    Object {
+      "marginBottom": "30px",
+    }
+  }
+  swipeToSlide={true}
+>
+  <CurrencyEntry
+    balance={300}
+    currency="EUR"
+    destinationRate="1.456"
+    id={0}
+    key="0"
+    name="source"
+    onChange={[MockFunction]}
+    ratesFetched={[MockFunction]}
+    showExchangeRate={true}
+    symbol="€"
+    value="20.40"
+  />
+  <CurrencyEntry
+    balance={300}
+    currency="GBP"
+    destinationRate="1.456"
+    id={1}
+    key="1"
+    name="source"
+    onChange={[MockFunction]}
+    ratesFetched={[MockFunction]}
+    showExchangeRate={true}
+    symbol="£"
+    value="20.40"
+  />
+  <CurrencyEntry
+    balance={300}
+    currency="USD"
+    destinationRate="1.456"
+    id={2}
+    key="2"
+    name="source"
+    onChange={[MockFunction]}
+    ratesFetched={[MockFunction]}
+    showExchangeRate={true}
+    symbol="$"
+    value="20.40"
+  />
+</Slider>
+`;

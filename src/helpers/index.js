@@ -32,7 +32,7 @@ export const validateNumber = value => {
 
 export const getInputValue = value => {
   const stringifiedInputValue = value.toString();
-  if (this.checkValueContainsPlusorMinus(value)) {
+  if (checkValueContainsPlusorMinus(value)) {
     if (stringifiedInputValue.length > 1) {
       return stringifiedInputValue.substring(1);
     }

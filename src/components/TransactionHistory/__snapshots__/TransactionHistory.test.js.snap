@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionHistory component Renders correctly 1`] = `
+<Fragment>
+  <DateComponent />
+  <TransactionHistoryItem
+    hasMarginBottom="mb-0"
+    history={
+      Object {
+        "description": "Exchanged to EUR",
+        "destinationAmount": 42,
+        "destinationCurrency": "EUR",
+        "id": 0,
+        "sourceAmount": 23,
+        "sourceCurrency": "USD",
+        "time": "2:35:41 PM",
+      }
+    }
+    key="0"
+  />
+</Fragment>
+`;

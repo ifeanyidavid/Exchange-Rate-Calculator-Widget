@@ -4,7 +4,7 @@ import DateComponent from "../DateComponent";
 import TransactionHistoryItem from "../TransactionHistoryItem";
 
 function TransactionHistory({ transactionHistory }) {
-  const hasMarginBottom = transactionHistory.length > 1 ? "mb-2" : "mb-0";
+  const marginBottom = transactionHistory.length > 1 ? "mb-2" : "mb-0";
   return (
     <>
       <DateComponent />
@@ -12,7 +12,7 @@ function TransactionHistory({ transactionHistory }) {
         <TransactionHistoryItem
           key={history.id}
           history={history}
-          hasMarginBottom={hasMarginBottom}
+          hasMarginBottom={marginBottom}
         />
       ))}
     </>

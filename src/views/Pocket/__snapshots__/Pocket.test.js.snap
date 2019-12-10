@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pockets component Renders correctly 1`] = `
+<Pocket
+  pockets={
+    Array [
+      Object {
+        "balance": 300,
+        "currency": "EUR",
+        "description": "Euro",
+        "id": 0,
+        "symbol": "€",
+      },
+      Object {
+        "balance": 300,
+        "currency": "GBP",
+        "description": "British Pound",
+        "id": 1,
+        "symbol": "£",
+      },
+      Object {
+        "balance": 300,
+        "currency": "USD",
+        "description": "American Dollar",
+        "id": 2,
+        "symbol": "$",
+      },
+    ]
+  }
+  setExchangeOpenState={[MockFunction]}
+  sourceCurrency="EUR"
+  transactionHistory={
+    Array [
+      Object {
+        "description": "Exchanged to EUR",
+        "destinationAmount": 42,
+        "destinationCurrency": "EUR",
+        "id": 0,
+        "sourceAmount": 23,
+        "sourceCurrency": "USD",
+        "time": "2:35:40 PM",
+      },
+    ]
+  }
+  updateSourceCurrency={[MockFunction]}
+/>
+`;

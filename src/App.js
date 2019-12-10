@@ -3,8 +3,6 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import "./App.css";
-import Pocket from "./views/Pocket";
-import CurrencyExchange from "./views/CurrencyExchange";
 import {
   updateSourceCurrency,
   updateDestinationCurrency,
@@ -20,6 +18,8 @@ import {
   getTransactionHistory
 } from "./redux/selectors";
 import ErrorBoundary from "./components/ErrorBoundary";
+import PocketWrapper from "./views/Pocket";
+import CurrencyExchangeWrapper from "./views/CurrencyExchange";
 
 const Container = styled.div`
   width: 100%;
@@ -64,7 +64,7 @@ function App({
           <div className="col-12 col-md-5">
             <div className="w-100 border rounded">
               {exchangeViewOpen ? (
-                <CurrencyExchange
+                <CurrencyExchangeWrapper
                   setExchangeOpenState={setExchangeOpenState}
                   sourceCurrency={sourceCurrency}
                   destinationCurrency={destinationCurrency}
@@ -80,7 +80,7 @@ function App({
                   doExchangeCurrency={doExchangeCurrency}
                 />
               ) : (
-                <Pocket
+                <PocketWrapper
                   setExchangeOpenState={setExchangeOpenState}
                   updateSourceCurrency={updateSourceCurrencySlide}
                   pockets={pocketValues}
@@ -96,7 +96,7 @@ function App({
   );
 }
 
-const mapStateToProps = state => {
+/* const mapStateToProps = state => {
   return {
     sourceCurrency: getSourceCurrency(state),
     destinationCurrency: getDestinationCurrency(state),
@@ -107,9 +107,9 @@ const mapStateToProps = state => {
     destinationConversionRates: getDestinationConversionRates(state),
     transactionHistory: getTransactionHistory(state)
   };
-};
+}; */
 
-const mapDispatchToProps = dispatch => {
+/* const mapDispatchToProps = dispatch => {
   return {
     updateSourceCurrencySlide: slideIndex =>
       dispatch(updateSourceCurrency(slideIndex)),
@@ -130,9 +130,34 @@ const mapDispatchToProps = dispatch => {
         )
       )
   };
-};
+}; */
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+// export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+export default connect(
+  state => ({
+    sourceCurrency: getSourceCurrency(state),
+    destinationCurrency: getDestinationCurrency(state),
+    rates: getRates(state),
+    pocketValues: pocketValues(state),
+    pockets: state.pocketsReducer.pockets,
+    sourceConversionRates: getSourceConversionRates(state),
+    destinationConversionRates: getDestinationConversionRates(state),
+    transactionHistory: getTransactionHistory(state)
+  }),
+  {
+    updateSourceCurrencySlide: slideIndex => updateSourceCurrency(slideIndex),
+    updateDestinationCurrencySlide: slideIndex =>
+      updateDestinationCurrency(slideIndex),
+    doExchangeCurrency: (
+      source,
+      destination,
+      sourceCurrency,
+      destinationCurrency
+    ) =>
+      exchangeCurrency(source, destination, sourceCurrency, destinationCurrency)
+  }
+)(App);
 
 App.propTypes = {
   updateSourceCurrencySlide: PropTypes.func.isRequired,
